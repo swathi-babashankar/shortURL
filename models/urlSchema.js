@@ -12,6 +12,12 @@ const urlSchema = mongoose.Schema({
         type: {type: Schema.Types.ObjectId},
         required: true
     },
+    givenUrl: {
+        type: String,
+        required: true,
+    },
 
     timeStamp: true
 })
+
+module.exports = mongoose.model("urls", urlSchema);
